@@ -35,14 +35,14 @@ export const settings = definePluginSettings({
     myLanguage: {
         type: OptionType.STRING,
         description: "",
-        default: "en",
+        default: "",
         hidden: true,
         onChange: () => notifyModeChange()
     },
     autoTarget: {
         type: OptionType.BOOLEAN,
         description: "",
-        default: false,
+        default: true,
         hidden: true,
         onChange: () => notifyModeChange()
     },

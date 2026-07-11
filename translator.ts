@@ -168,7 +168,7 @@ export async function detectLanguage(text: string): Promise<string | null> {
     const { masked } = protect(text);
     if (!hasTranslatableText(masked)) return null;
     try {
-        const res = await googleTranslateCached(masked, settings.store.myLanguage);
+        const res = await googleTranslateCached(masked, settings.store.myLanguage || "en");
         return res.sourceCode || null;
     } catch {
         return null;
@@ -178,6 +178,8 @@ export async function detectLanguage(text: string): Promise<string | null> {
 const pending = new Map<string, Promise<TranslationValue | null>>();
 
 export function translateIncoming(id: string, content: string): Promise<TranslationValue | null> {
+    if (!settings.store.myLanguage) return Promise.resolve(null);
+
     const cached = getCachedIncoming(id, content);
     if (cached !== undefined) return Promise.resolve(cached);
 
