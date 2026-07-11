@@ -35,7 +35,7 @@ export const settings = definePluginSettings({
     myLanguage: {
         type: OptionType.STRING,
         description: "",
-        default: "it",
+        default: "en",
         hidden: true,
         onChange: () => notifyModeChange()
     },
