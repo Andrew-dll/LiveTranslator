@@ -1,0 +1,194 @@
+.vc-livetrans-button-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.vc-livetrans-lang-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--interactive-normal);
+    user-select: none;
+}
+
+.vc-livetrans-lang-tag.vc-livetrans-mode-send {
+    color: var(--brand-500, #5865f2);
+}
+
+.vc-livetrans-lang-tag.vc-livetrans-mode-both {
+    color: var(--status-positive, #23a55a);
+}
+
+.vc-livetrans-chat-button {
+    color: var(--interactive-normal);
+    border-radius: 6px;
+    padding: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.vc-livetrans-chat-button.vc-livetrans-mode-send {
+    color: #fff;
+    background: var(--brand-500, #5865f2);
+}
+
+.vc-livetrans-chat-button.vc-livetrans-mode-both {
+    color: #fff;
+    background: var(--status-positive, #23a55a);
+}
+
+.vc-livetrans-content-anchor {
+    display: none;
+}
+
+.vc-livetrans-content-host {
+    display: contents;
+}
+
+.vc-livetrans-msg-original {
+    display: none !important;
+}
+
+.vc-livetrans-reveal .vc-livetrans-msg-original {
+    display: revert !important;
+    animation: vc-livetrans-fade 0.25s ease;
+}
+
+.vc-livetrans-reveal .vc-livetrans-msg-own {
+    display: none !important;
+}
+
+.vc-livetrans-reveal .vc-livetrans-accessory {
+    display: none;
+}
+
+@keyframes vc-livetrans-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vc-livetrans-rise {
+    from {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.vc-livetrans-accessory {
+    display: block;
+    color: var(--text-default, var(--text-normal, currentcolor));
+    font-size: 1rem;
+    line-height: 1.375rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    user-select: text;
+    animation: vc-livetrans-fade 0.25s ease;
+}
+
+.vc-livetrans-appear {
+    animation: vc-livetrans-rise 0.3s ease;
+}
+
+.vc-livetrans-reveal .vc-livetrans-outgoing-original {
+    animation: vc-livetrans-fade 0.25s ease;
+}
+
+.vc-livetrans-outgoing-original {
+    display: none;
+    color: var(--text-default, var(--text-normal, currentcolor));
+    font-size: 1rem;
+    line-height: 1.375rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    user-select: text;
+}
+
+.vc-livetrans-reveal .vc-livetrans-outgoing-original {
+    display: block;
+}
+
+.vc-livetrans-badge {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 4px;
+    padding: 1px 6px;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 13px;
+    color: var(--status-positive, #23a55a);
+    background: color-mix(in srgb, var(--status-positive, #23a55a) 12%, transparent);
+    user-select: none;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.vc-livetrans-badge-trans {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.vc-livetrans-badge-icon {
+    flex-shrink: 0;
+}
+
+.vc-livetrans-badge-revealing {
+    color: var(--text-muted, #949ba4);
+    background: color-mix(in srgb, var(--text-muted, #949ba4) 12%, transparent);
+}
+
+.vc-livetrans-badge-revealing .vc-livetrans-badge-trans {
+    display: none;
+}
+
+.vc-livetrans-badge:not(.vc-livetrans-badge-revealing) .vc-livetrans-badge-orig {
+    display: none;
+}
+
+.vc-livetrans-reply {
+    min-width: 0;
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    color: var(--text-muted, #949ba4);
+    cursor: pointer;
+}
+
+.vc-livetrans-reply:hover {
+    color: var(--interactive-hover, var(--text-default));
+}
+
+.vc-livetrans-reply-anchor {
+    display: none;
+}
+
+.vc-livetrans-reply-host {
+    display: contents;
+}
+
+.vc-livetrans-reply-original {
+    display: none !important;
+}
+
+.vc-livetrans-reveal .vc-livetrans-reply-original {
+    display: revert !important;
+}
+
+.vc-livetrans-reveal .vc-livetrans-reply {
+    display: none;
+}
