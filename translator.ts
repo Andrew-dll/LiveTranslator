@@ -57,7 +57,7 @@ export async function googleTranslate(text: string, sourceLang: string, targetLa
     const url = "https://translate-pa.googleapis.com/v1/translate?" + new URLSearchParams({
         "params.client": "gtx",
         "dataTypes": "TRANSLATION",
-        "key": "AIzaSyDLEeFI5OtFBwYBIoK_jj5m32rZK5CkCXA",
+        "key": "AIzaSyDLEeFI5OtFBwYBIoK_jj5m32rZK5CkCXA", //it's not mine LOL. 
         "query.sourceLanguage": sourceLang,
         "query.targetLanguage": targetLang,
         "query.text": text,
