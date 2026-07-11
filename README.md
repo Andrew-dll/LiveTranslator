@@ -114,13 +114,6 @@ Load the appropriate directory through your browser's extension-development page
 4. Use the translation button beside the chat box to choose the active mode.
 5. Send messages normally.
 
-To bypass translation for one outgoing message, place a backslash at the beginning:
-
-```text
-\This message will be sent without translation.
-```
-
-The leading backslash is removed before sending.
 
 ## Settings
 
